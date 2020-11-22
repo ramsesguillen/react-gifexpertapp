@@ -24,9 +24,11 @@ img {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  width: 95%;
 }
 .contenido-principal {
   flex: 1;
+
 }
 form {
   display: flex;
@@ -34,26 +36,34 @@ form {
   flex-direction: column;
   justify-content: center;
 }
+
 .boton {
   background-color: #4273B8;
   color: #fff;
-  display: inline-block;
-  text-align: center;
-  text-decoration: none;
   border-radius: 5px;
   font-size: 1.2rem;
-  padding: 1rem 3rem;
+  margin-bottom: 35px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 1rem;
   text-transform: capitalize;
+  width: 90%;
 }
-
-
+@media (min-width: 768px) {
+  .boton {
+    width: 20%;
+  }
+}
 input {
   color: gray;
   border:2px solid  rgb(224, 221, 221);
   border-radius: 4px;
   font-size: 1.2rem;
   padding: 15px;
-  width: 100%;
+  display: block;
+  max-width: 100%;
+  align-items: center;
 }
 
 .card-grid {
