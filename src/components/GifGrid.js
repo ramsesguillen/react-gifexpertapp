@@ -17,7 +17,7 @@ export const GifGrid = ({ category }) => {
 
     return (
         <>
-            <h3>{ category}</h3>
+            <h2 className="boton">{ category }</h2>
 
             { loading && <div className="spinner">
                     <div className="rect1"></div>
@@ -38,6 +38,7 @@ export const GifGrid = ({ category }) => {
                         ))
                     }
             </div>
+            <div className="separador-grid"></div>
         </>
     )
 }

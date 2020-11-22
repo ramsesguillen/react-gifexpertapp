@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { AddCategory } from './components/AddCategory';
+import { Footer } from './components/Footer';
 import { GifGrid } from './components/GifGrid';
 
 const GifExpertApp = () => {
 
-    const [categories, setCategories] = useState(['Dragon Ball Z']);
+    const [categories, setCategories] = useState(['Congratulation']);
+    const fecha =  new Date().getFullYear();
 
     // const handleadd = () => {
     //     setCategories([...categories, 'One piece']);
@@ -12,13 +14,12 @@ const GifExpertApp = () => {
     // };
     return (
         <>
-            <h2>GifExpertApp</h2>
+            <h2 className="titulo">GifExpertApp</h2>
             <AddCategory
                 setCategories={ setCategories }
             />
-            <hr />
 
-            <div>
+            <div className="contenido-principal">
                 {
                     categories.map( category => (
                         <GifGrid
@@ -28,6 +29,7 @@ const GifExpertApp = () => {
                     ))
                 }
             </div>
+            <Footer fecha={ fecha }/>
         </>
     );
 }

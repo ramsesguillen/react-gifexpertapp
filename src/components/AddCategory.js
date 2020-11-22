@@ -26,6 +26,7 @@ export const AddCategory = ({ setCategories }) => {
                 value={ inputValue }
                 onChange= { (e) => handleInputChange(e) }
             />
+            <div className="separador"></div>
         </form>
     )
 }
